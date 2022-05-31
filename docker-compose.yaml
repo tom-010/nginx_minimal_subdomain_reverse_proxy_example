@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+
+  reverse-proxy:
+    build: reverse_proxy
+    ports:
+        - "80:80"
+
+  home:
+    build: home
+    expose:
+      - 80
+
+  site1:
+    build: site1
+    expose:
+      - 80
+
+  site2:
+    build: site2
+    expose:
+      - 80
